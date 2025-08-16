@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@keyframes marquee-once {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  display: inline-flex;
+  animation: marquee-once 20s linear infinite;
+}
