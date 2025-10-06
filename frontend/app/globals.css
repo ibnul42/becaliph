@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-900: #053C5E;
+  --color-primary-800: #19506F;
+  --color-primary-700: #326480;
+  --color-primary-600: #4C7891;
+  --color-primary-500: #668BA2;
+  --color-secondary-900: #4A3109;
+  --color-secondary-800: #8F5D0F;
+  --color-secondary-700: #B57712;
+  --color-secondary-500: #D58F13;
+  --color-secondary-500: #ED9E15;
+}
+
 @keyframes marquee-once {
   0% {
     transform: translateX(0);
