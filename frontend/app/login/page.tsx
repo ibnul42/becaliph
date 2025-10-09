@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Eye, EyeOff, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Input from "@/components/Input";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -42,18 +43,15 @@ export default function LoginPage() {
           </h2>
           <form className="space-y-4">
             {/* Email */}
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full px-4 py-2 border border-[#053C5E] rounded-full outline-none focus:ring-2 focus:ring-sky-500"
-            />
+            <div className="mb-4 relative">
+              <Input label="Email Address" name="email" type="email" />
+            </div>
 
             {/* Password */}
             <div className="relative">
-              <input
+              <Input
                 type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                className="w-full px-4 py-2 border border-[#053C5E] rounded-full outline-none focus:ring-2 focus:ring-sky-500"
+                label="Password"
               />
               <button
                 type="button"
