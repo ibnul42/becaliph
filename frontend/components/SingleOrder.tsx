@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import StarIcon from "./icons/StarIcon";
 import StarRating from "./StarRating";
 
 interface SingleOrderProps {

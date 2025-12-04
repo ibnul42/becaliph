@@ -1,6 +1,4 @@
 import React from "react";
-import { User, ShoppingBag, Star } from "lucide-react";
-import Link from "next/link";
 import DashboardOtions from "./DashboardOtions";
 
 export default function DashboardLayout({
