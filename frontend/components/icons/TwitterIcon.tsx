@@ -3,7 +3,7 @@ import React from "react";
 
 const TwitterIcon: React.FC<IconProps> = ({
   width = 28,
-  height = 16,
+  height = 28,
   size,
   fill = "currentColor",
   ...props
