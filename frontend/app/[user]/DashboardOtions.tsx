@@ -18,7 +18,7 @@ export default function DashboardOtions() {
     }`;
 
   return (
-    <aside className="w-60 space-y-10">
+    <aside className="w-60 shrink-0 space-y-10">
       <div className="border-[0.5px] border-gray-300 px-5 py-3 rounded-md">
         <Link
           href={`/${user}/orders`}
@@ -28,8 +28,8 @@ export default function DashboardOtions() {
         </Link>
 
         <Link
-          href={`/${user}/downloads`}
-          className={linkClasses(`/${user}/downloads`)}
+          href={`/${user}/completed`}
+          className={linkClasses(`/${user}/completed`)}
         >
           Download Delivery Files
         </Link>

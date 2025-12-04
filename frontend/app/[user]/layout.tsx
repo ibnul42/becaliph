@@ -22,10 +22,6 @@ export default function DashboardLayout({
         <DashboardOtions />
         <main className="flex-grow">{children}</main>
       </section>
-      {/* Sidebar */}
-
-      {/* Main content */}
-      {/* <main className="flex-1 p-10">{children}</main> */}
     </div>
   );
 }
