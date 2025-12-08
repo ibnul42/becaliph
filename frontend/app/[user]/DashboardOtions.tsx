@@ -44,8 +44,8 @@ export default function DashboardOtions() {
 
       <div className="border-[0.5px] border-gray-300 px-5 py-3 rounded-md">
         <Link
-          href={`/${user}/profile`}
-          className={linkClasses(`/${user}/profile`)}
+          href={`/${user}/edit`}
+          className={linkClasses(`/${user}/edit`)}
         >
           Edit Profile
         </Link>
