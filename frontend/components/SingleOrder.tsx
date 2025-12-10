@@ -9,6 +9,7 @@ interface SingleOrderProps {
   deadline?: string;
   completed?: string;
   details?: boolean;
+  invoices?: boolean;
   file?: string;
   star?: number;
   review?: string;
@@ -28,6 +29,7 @@ export default function SingleOrder({
   deadline,
   completed,
   details,
+  invoices,
   file,
   star,
   review,
@@ -98,6 +100,14 @@ export default function SingleOrder({
             className="px-3 py-2 rounded-full bg-primary-900 text-white whitespace-nowrap"
           >
             View Details
+          </button>
+        )}
+        {invoices && (
+          <button
+            onClick={onViewDetails}
+            className="px-3 py-2 rounded-full bg-primary-900 text-white whitespace-nowrap"
+          >
+            Download Invoice
           </button>
         )}
       </div>
