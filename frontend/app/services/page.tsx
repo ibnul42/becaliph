@@ -47,7 +47,7 @@ const items = [
 
 export default function page() {
   return (
-    <div className="w-full py-5 px-3">
+    <div className="w-full max-w-7xl mx-auto py-5 px-3">
       <h1 className="text-3xl text-primary-900 text-center font-semibold">
         Your solution starts here
       </h1>
@@ -55,7 +55,7 @@ export default function page() {
         Explore our services
       </p>
 
-      <div className="grid grid-cols-2 gap-5 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
         {items.map((item, index) => (
           <div
             key={index}
@@ -68,7 +68,7 @@ export default function page() {
               }
             )}
           >
-            <div className="relative h-full w-full aspect-square rounded-lg overflow-hidden">
+            <div className="relative h-auto w-full aspect-square rounded-lg overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -78,12 +78,12 @@ export default function page() {
             </div>
             <div className="space-y-2 flex flex-col justify-between">
               <section className="space-y-2">
-                <p className="text-2xl text-medium">{item.title}</p>
+                <p className="text-2xl font-semibold capitalize">{item.title}</p>
                 <p className="text-[#545454] text-sm line-clamp-4">
                   {item.desc}
                 </p>
               </section>
-              <button className="w-full max-w-80 self-end bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white">
+              <button className="w-full max-w-80 self-end bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white uppercase font-semibold">
                 explore now
               </button>
             </div>

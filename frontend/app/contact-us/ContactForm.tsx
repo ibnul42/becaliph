@@ -1,4 +1,5 @@
 "use client";
+import cn from "clsx";
 
 import React, { useState, FormEvent } from "react";
 
@@ -19,8 +20,13 @@ export default function ContactForm() {
     "idle" | "sending" | "success" | "error"
   >("idle");
   const [error, setError] = useState<string | null>(null);
+  const [otherActive, setOtherActive] = useState(false);
 
-  const toggleInterest = (i: string) => setSelected(i);
+  const toggleInterest = (i: string) => {
+    setSelected(i);
+    if (i === "Other") setOtherActive(true);
+    else setOtherActive(false);
+  };
 
   const validateEmail = (e: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim());
@@ -88,12 +94,34 @@ export default function ContactForm() {
               {i}
             </button>
           ))}
+          <section
+            className={cn("flex gap-2", {
+              hidden: !otherActive,
+            })}
+          >
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Development..."
+              className="w-full px-3 py-2 text-[14px] border-t border-l border-r border-b-2 border-[#e6e6e6] rounded-md focus:outline-none focus:ring-1 focus:ring-primary-900 focus-within:border-b-2 focus:border-b-primary-900"
+              required
+            />
+            <button
+              onClick={() => setOtherActive(false)}
+              className="border border-primary-900 px-4 text-primary-900 hover:bg-primary-900 hover:text-white transition-all rounded-full cursor-pointer"
+            >
+              Cancel
+            </button>
+          </section>
         </div>
       </div>
 
       <form onSubmit={handleSubmit} className="grid gap-3">
         <label className=" text-[#333]">
-          <div className="text-xs mb-1.5">Your name</div>
+          <p className="text-xs mb-1.5 space-x-1">
+            <span>Your name</span>
+            <span className="text-red-500">*</span>
+          </p>
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -104,7 +132,10 @@ export default function ContactForm() {
         </label>
 
         <label className=" text-[#333]">
-          <div className="text-xs mb-1.5">Your email</div>
+          <p className="text-xs mb-1.5 space-x-1">
+            <span>Your email</span>
+            <span className="text-red-500">*</span>
+          </p>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
