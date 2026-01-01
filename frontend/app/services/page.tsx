@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import cn from "clsx";
+import Link from "next/link";
 
 const items = [
   {
@@ -68,24 +69,30 @@ export default function page() {
               }
             )}
           >
-            <div className="relative h-auto w-full aspect-square rounded-lg overflow-hidden">
+            <div className="flex items-center rounded-lg overflow-hidden">
               <Image
                 src={item.image}
                 alt={item.title}
-                fill
-                className="rounded-lg"
+                width={500}
+                height={500}
+                className="rounded-lg h-auto w-full"
               />
             </div>
             <div className="space-y-2 flex flex-col justify-between">
               <section className="space-y-2">
-                <p className="text-2xl font-semibold capitalize">{item.title}</p>
+                <p className="text-2xl font-semibold capitalize">
+                  {item.title}
+                </p>
                 <p className="text-[#545454] text-sm line-clamp-4">
                   {item.desc}
                 </p>
               </section>
-              <button className="w-full max-w-80 self-end bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white uppercase font-semibold">
+              <Link
+                href={`/services/${item.title.toLocaleLowerCase()}`}
+                className="w-full max-w-80 text-center bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white uppercase font-semibold"
+              >
                 explore now
-              </button>
+              </Link>
             </div>
           </div>
         ))}
