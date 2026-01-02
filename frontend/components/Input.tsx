@@ -48,13 +48,10 @@ const Input: React.FC<InputProps> = ({
 
       <label
         htmlFor={inputId}
-        className={clsx(
-          "absolute transition-all duration-200 cursor-auto",
-          {
-            "-top-2 left-5 text-xs text-primary-900 px-1.5 bg-white": isFloated,
-            "top-1/2 left-4 -translate-y-1/2 text-base text-gray-400": !isFloated,
-          }
-        )}
+        className={clsx("absolute transition-all duration-200 cursor-auto", {
+          "-top-2 left-5 text-xs text-primary-900 px-1.5 bg-white": isFloated,
+          "top-1/2 left-4 -translate-y-1/2 text-base text-gray-400": !isFloated,
+        })}
       >
         {label}
       </label>

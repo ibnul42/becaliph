@@ -29,10 +29,7 @@ const TrustedBy: React.FC = () => {
       <div className="relative w-full overflow-hidden">
         <div className="marquee flex gap-12">
           {logos.map((logo, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-2 flex-shrink-0"
-            >
+            <div key={i} className="flex items-center gap-2 flex-shrink-0">
               <Image
                 src={logo}
                 alt="Logo"

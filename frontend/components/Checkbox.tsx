@@ -20,9 +20,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           className="peer appearance-none w-4 h-4 rounded-full border border-primary-700 cursor-pointer transition-all duration-200 checked:border-primary-700"
           {...props}
         />
-        <span
-          className="pointer-events-none absolute w-2 h-2 rounded-full bg-primary-700 scale-0 peer-checked:scale-100 transition-transform duration-200"
-        />
+        <span className="pointer-events-none absolute w-2 h-2 rounded-full bg-primary-700 scale-0 peer-checked:scale-100 transition-transform duration-200" />
       </div>
 
       <span>

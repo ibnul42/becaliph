@@ -16,7 +16,7 @@ export default function StarRating({ value, className }: StarRatingProps) {
           filled={num <= value}
           className={clsx(
             "text-gray-300 w-4 h-4",
-            num <= value && "text-yellow-500" 
+            num <= value && "text-yellow-500"
           )}
         />
       ))}

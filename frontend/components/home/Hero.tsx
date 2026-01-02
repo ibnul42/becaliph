@@ -23,7 +23,9 @@ const Hero: React.FC = () => {
             <p className="md:text-4xl">Your Vision, </p>
             <p>
               <span>Our Digital</span>{" "}
-              <span className="text-3xl md:text-4xl lg:text-6xl font-bold">Expertise.</span>
+              <span className="text-3xl md:text-4xl lg:text-6xl font-bold">
+                Expertise.
+              </span>
             </p>
             <p>Let’s build your dream</p>
             <span className="text-2xl md:text-4xl lg:text-5xl font-extrabold ml-16">
@@ -32,11 +34,14 @@ const Hero: React.FC = () => {
           </div>
 
           <p className="text-gray-200 mt-6 max-w-md">
-            <span>Becaliph’s designs and services help your brand stand out with bold, strategic visuals.</span>
+            <span>
+              Becaliph’s designs and services help your brand stand out with
+              bold, strategic visuals.
+            </span>
             <span className="flex gap-1">
               Have a look on Becaliph
               <Link href="/portfolio" className="underline text-[#ED9E15]">
-                 Portfolio
+                Portfolio
               </Link>
             </span>
           </p>

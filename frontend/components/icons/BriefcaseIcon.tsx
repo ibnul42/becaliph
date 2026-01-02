@@ -1,11 +1,11 @@
-import { IconProps } from '@/types/Icon';
-import React from 'react';
+import { IconProps } from "@/types/Icon";
+import React from "react";
 
 const BriefcaseIcon: React.FC<IconProps> = ({
   width = 25,
   height = 24,
   size,
-  fill = 'currentColor',
+  fill = "currentColor",
   ...props
 }) => {
   const finalWidth = size ?? width;
