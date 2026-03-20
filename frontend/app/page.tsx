@@ -1,6 +1,7 @@
 import AboutSection from "@/components/home/AboutSection";
 import Achievements from "@/components/home/Achievements";
 import Hero from "@/components/home/Hero";
+import HorizontalScroll from "@/components/home/HorizontalScroll";
 import Testimonials from "@/components/home/Testimonials";
 import TrustedBy from "@/components/home/TrustedBy";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <TrustedBy />
       <AboutSection />
+      <HorizontalScroll />
       <Achievements stats={stats} />
       <Testimonials />
     </div>
