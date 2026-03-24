@@ -48,48 +48,43 @@ const items = [
 
 export default function page() {
   return (
-    <div className="w-full max-w-7xl mx-auto py-5 px-3">
-      <h1 className="text-3xl text-primary-900 text-center font-semibold">
+    <div className="container mx-auto py-5 px-3">
+      <h1 className="text-xl md:text-2xl lg:text-3xl text-primary-900 text-center font-semibold">
         Your solution starts here
       </h1>
-      <p className="text-lg text-primary-900 text-center">
+      <p className="text-sm md:text-lg text-primary-900 text-center">
         Explore our services
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 py-10">
         {items.map((item, index) => (
           <div
             key={index}
             className={cn(
-              "p-4 flex gap-2 shadow-[2px_2px_20px_0px_rgba(0,0,0,0.1)] my-1 rounded-lg",
-              {
-                "col-span-2 gap-10":
-                  item.title === "Design Solution" ||
-                  item.title === "Video Editing",
-              }
+              "px-2 lg:px-3 py-3 lg:py-5 flex gap-2 shadow-[2px_2px_20px_0px_rgba(0,0,0,0.1)] my-1 rounded-lg",
             )}
           >
-            <div className="flex items-center rounded-lg overflow-hidden">
+            <div className="p-2 flex rounded-lg overflow-hidden relative w-20 md:w-25 lg:w-30 xl:w-40 shrink-0 items-center justify-center group">
               <Image
                 src={item.image}
                 alt={item.title}
                 width={500}
                 height={500}
-                className="rounded-lg h-auto w-full"
+                className="w-full h-auto object-cover object-center  transition-all group-hover:scale-105"
               />
             </div>
             <div className="space-y-2 flex flex-col justify-between">
               <section className="space-y-2">
-                <p className="text-2xl font-semibold capitalize">
+                <p className="text-lg md:text-xl font-semibold capitalize">
                   {item.title}
                 </p>
-                <p className="text-[#545454] text-sm line-clamp-4">
+                <p className="text-[#545454] text-xs lg:text-sm line-clamp-4">
                   {item.desc}
                 </p>
               </section>
               <Link
                 href={`/services/${item.title.toLocaleLowerCase()}`}
-                className="w-full max-w-80 text-center bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white uppercase font-semibold"
+                className="w-full max-w-80 text-center bg-primary-900 hover:bg-primary-800 transition-all cursor-pointer py-2 rounded-full text-white text-sm lg:text-base uppercase font-semibold"
               >
                 explore now
               </Link>
